@@ -57,7 +57,7 @@ exports.filter = async (req, res, next) => {
                 entities.push(mapEntity(entityResponse));
             }
             if (fail) {
-                res.status(404).send({
+                res.status(400).send({
                     error: "Error en validación datos de entrada",
                 });
             } else {
